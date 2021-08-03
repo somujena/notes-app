@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Quick Notes</a>
+            <h1 style="color: rgb(199, 207, 205);">Welcome to Quick Notes</h1>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -21,36 +21,50 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
 
                 </ul>
                 <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <input class="form-control me-2" id="searchTxt" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button id="clearall" class="btn btn-outline-success" type="submit"
+                        style="color: rgb(255, 251, 251);">Clear All Notes</button>
                 </form>
             </div>
         </div>
     </nav>
 
     <div class="container my-3">
-        <h1>Welcome to Quick Notes</h1>
-        <div class="card">
+        <!-- <h1>Welcome to Quick Notes</h1> -->
+        <div class="card" style="background-color: #f6f8fa">
             <div class="card-body">
-                <h5 class="card-title">Add a note</h5>
+
                 <div class="form-group">
-                    <textarea class="form-control" id="addTxt" rows="3"></textarea>
+                    <h5 class="card-title" style="color:rgb(0, 0, 0)">Add Title</h5>
+                    <textarea class="form-control" id="addTxtTitle" rows="1" style="width: 25rem;"></textarea>
+                    <h5 class="card-title my-1" style="color:rgb(0, 0, 0)">Add Notes Content</h5>
+                    <textarea class="form-control " id="addTxtContent" rows="3"></textarea>
                 </div>
                 <button href="#" class="btn btn-primary" id="addbtn">Add a note</button>
             </div>
         </div>
         <h1>Your Notes</h1>
-        <div id="notes" class="row container-fluid">
-            <!-- <div class="my-2 mx-2 card" style="width: 18rem;">
+        <div id="notes" class="row container-fluid ">
+
+            <!-- Will be injected by JavaScript -->
+            <!-- <div class="notecard my-2 mx-2 card" style="width:  18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p></p>
+                    <div>
+                        <div  style = "float:left;width: 75%; font-size: 22px;">
+                            Title
+                        </div>
+                        
+                        <div  style = "float:left;">
+                            <a title="short detail" style="color: rgb(233, 53, 53); background-color: rgb(192, 196, 191);">Details</a>
+                        </div>
+                        
+                    </div>
+                    <br><br>
+                    <p style="background-color: rgb(187, 218, 187);">Content</p>
                     <button href="#" class="btn btn-primary">Delete</button>
                 </div>
             </div> -->
