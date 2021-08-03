@@ -39,7 +39,7 @@ function shownotes() {
             <div class="card-body">
                 <h5 class="card-title">Title ${index + 1}</h5>
                 <p class="card-text" > ${element}</p>
-                <button  class="btn btn-primary">Delete</button>
+                <button id="${index}" onclick="deletenodes(${index})" class="btn btn-primary">Delete</button>
             </div>
         </div>
     </div>
@@ -56,3 +56,18 @@ function shownotes() {
 }
 
 // delete notes
+function deletenodes(index){
+   console.log(index);
+   let notes = localStorage.getItem("notes");
+    if (notes == null) {
+        notesobj = [];
+    }
+    else {
+        notesobj = JSON.parse(notes);
+    }
+    notesobj.splice(index,1);
+    localStorage.setItem("notes", JSON.stringify(notesobj));
+    
+    shownotes();
+
+}
