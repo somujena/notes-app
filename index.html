@@ -11,6 +11,32 @@
 </head>
 
 <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBmkAvbl4FTJiSlCfucgAX0hBklcxCKRAg",
+            authDomain: "notes-project-20.firebaseapp.com",
+            projectId: "notes-project-20",
+            storageBucket: "notes-project-20.appspot.com",
+            messagingSenderId: "413970800117",
+            appId: "1:413970800117:web:d664d8abeb46a9a77454bc",
+            measurementId: "G-ZE6L97P6YW"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <h1 style="color: rgb(199, 207, 205);">Welcome to Quick Notes</h1>
@@ -26,9 +52,9 @@
                 <form class="d-flex">
                     <input class="form-control me-2" id="searchTxt" type="search" placeholder="Search"
                         aria-label="Search">
-                    <button id="clearall" class="btn btn-outline-success" type="submit"
-                        style="color: rgb(255, 251, 251);">Clear All Notes</button>
                 </form>
+                <button id="clearall" class="btn btn-outline-success" type="submit"
+                    style="color: rgb(255, 251, 251);">Clear All Notes</button>
             </div>
         </div>
     </nav>
@@ -40,9 +66,10 @@
 
                 <div class="form-group">
                     <h5 class="card-title" style="color:rgb(0, 0, 0)">Add Title</h5>
-                    <textarea class="form-control" id="addTxtTitle" rows="1" style="width: 25rem;"></textarea>
+                    <textarea class="form-control" id="addTxtTitle" rows="1" style="width: 25rem;"
+                        placeholder="Add Title"></textarea>
                     <h5 class="card-title my-1" style="color:rgb(0, 0, 0)">Add Notes Content</h5>
-                    <textarea class="form-control " id="addTxtContent" rows="3"></textarea>
+                    <textarea class="form-control " id="addTxtContent" rows="3" placeholder="Add Content"></textarea>
                 </div>
                 <button href="#" class="btn btn-primary" id="addbtn">Add a note</button>
             </div>
@@ -81,6 +108,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="JS/app.js"></script>
+
 </body>
 
 </html>
